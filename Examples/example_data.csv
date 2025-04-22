@@ -1,0 +1,4 @@
+question, answer
+what is TCP, Transmission Control Protocol is connection-oriented and ensures reliable delivery of data
+what is DNS, Domain Name System translates human-readable domain names (like example.com) into IP addresses that computers understand
+HTTP vs HTTPS, HTTPS is the secure version of HTTP
