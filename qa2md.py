@@ -5,7 +5,7 @@ import os
 try:
     file_path = input("Enter FULL file path to data: ")
     file_path = re.sub('"', '', file_path)
-    md_file   = input("Enter FULL path to written to: ")
+    md_file   = input("Enter FULL path to write to: ")
     md_file   = re.sub('"', '', md_file)
 except:
     print("\nProgramm stops on that request")
@@ -24,7 +24,9 @@ def doesFileExists(targetFile, dataFile):
     
 def askPathAgain():
     try:
-        file_path = input("Enter FULL file path to data: ")ULL path to written to: ")
+        file_path = input("Enter FULL file path to data: ")
+        file_path = re.sub('"', '', file_path)
+        md_file   = input("Enter FULL path to write to: ")
         md_file   = re.sub('"', '', md_file)
         run()
     except:
