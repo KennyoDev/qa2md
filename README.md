@@ -16,4 +16,4 @@ The usage is quite self-explanatory; you just enter the full path to the data (.
 ***Info: the data will be appended to the end of the file; plan accordingly.***
 
 
-To see the results, you can check out the Examples folder with a .csv file and the markdown file after the script was run.
+To see an example, you can check out the Examples folder with a .csv file and the markdown file after the script was run.
