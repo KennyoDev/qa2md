@@ -2,15 +2,6 @@ import csv
 import re
 import os
 
-try:
-    file_path = input("Enter FULL file path to data: ")
-    file_path = re.sub('"', '', file_path)
-    md_file   = input("Enter FULL path to write to: ")
-    md_file   = re.sub('"', '', md_file)
-except:
-    print("\nProgramm stops on that request")
-    quit()
-
 
 questions = []
 answers = []
@@ -22,18 +13,8 @@ def doesFileExists(targetFile, dataFile):
     else:
         return False
     
-def askPathAgain():
-    try:
-        file_path = input("Enter FULL file path to data: ")
-        file_path = re.sub('"', '', file_path)
-        md_file   = input("Enter FULL path to write to: ")
-        md_file   = re.sub('"', '', md_file)
-        run()
-    except:
-        print("\nProgramm stops on that request")
-        quit()
 
-def run():
+def run(file_path, md_file):
     if(doesFileExists(file_path, md_file)):
         with open(file_path, mode='r', newline='', encoding='ISO-8859-1') as file:
             reader = csv.reader(file)
@@ -67,7 +48,19 @@ def run():
 
     else:
         print("MD or Data file does not exists or you entered the wrong path")
-        askPathAgain()
+        askPath()
 
-#starting programm the first time
-run()
+
+def askPath():
+    try:
+        file_path = input("Enter FULL file path to data: ")
+        file_path = re.sub('"', '', file_path)
+        md_file   = input("Enter FULL path to write to: ")
+        md_file   = re.sub('"', '', md_file)
+        run(file_path, md_file)
+    except:
+        print("\nProgramm stops on that request")
+        quit()
+
+#starting the program the first time
+askPath()
